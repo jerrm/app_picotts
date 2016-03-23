@@ -2,17 +2,21 @@
            PicoTTS For Asterisk
 ===========================================
 
+Updated to build for Asterisk 13.
+
 This provides the "PicoTTS" dialplan application, which allows you to use
 the PicoTTS TTS Engine with Asterisk. This module invokes the PicoTTS TTS engine
 locally, and uses it to render text to speech.
-It works with asterisk versions 1.6.x, 1.8, 10
 
 ------------
 Requirements
 ------------
-Asterisk 1.6.1 (or later) header files
+Asterisk 13 header files 
+Should be OK with Asterisk 11, 12 and maybe others but has not been tested)
+
 sox installed and executable in the default path
 pico2wave installed and executable in the default path
+
 ------------
 Installation
 ------------

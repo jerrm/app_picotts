@@ -1,0 +1,13 @@
+2016-03-23 
+----------
+update to build for Asterisk 13 
+output sln as final format
+tracks current app_flite from Lefteris Zafiris a little closer
+
+config - 
+change "voice" option to "language"
+add "volume" option
+
+Makefile-
+add "as_flite" and "install_over_flite" targets to build as a drop-in 
+flite replacement
