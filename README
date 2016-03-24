@@ -12,7 +12,7 @@ locally, and uses it to render text to speech.
 Requirements
 ------------
 Asterisk 13 header files 
-Should be OK with Asterisk 11, 12 and maybe others but has not been tested)
+Should be OK with Asterisk 11, 12 and maybe others but has not been tested.
 
 sox installed and executable in the default path
 pico2wave installed and executable in the default path
