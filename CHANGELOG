@@ -1,3 +1,12 @@
+2016-03-27
+----------
+small cleanups
+change default volume to 0.8 to avoid clipping on 8K resample.
+
+add app_picotts.conf options-
+touchcache - time stamp cached files when played
+soxeffects - append parameters to sox conversion (such as speed up playback)
+
 2016-03-23 
 ----------
 update to build for Asterisk 13 

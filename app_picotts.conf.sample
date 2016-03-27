@@ -1,19 +1,9 @@
 ;
 ; PicoTTS Configuration
+; Asterisk reload required to update settings
 ;
 [general]
 ;
-; Use cache (yes, no - defaults to no)
-;
-;usecache=no
-;
-; If usecache=yes, a directory to store waveform cache files.
-; The cache is never cleared (yet), so you must take care of cleaning it
-; yourself (just delete any or all files from the cache).
-; THIS DIRECTORY *MUST* EXIST and must be writable from the asterisk process.
-; Defaults to /tmp/
-;
-;cachedir=/var/lib/asterisk/picottscache/
 ;
 ; Language (defaults to en-US)
 ; 
@@ -27,6 +17,27 @@
 ;
 ;language=en-US
 ;
+;
+; Use cache (yes, no - defaults to no)
+;
+;usecache=no
+;
+;
+; If usecache=yes, a directory to store waveform cache files.
+; The cache is never cleared (yet), so you must take care of cleaning it
+; yourself (just delete any or all files from the cache).
+; THIS DIRECTORY *MUST* EXIST and must be writable from the asterisk process.
+; Defaults to /tmp/
+;
+;cachedir=/var/lib/asterisk/picottscache/
+;
+;
+; Touch (time stamp) cache files as they are played. (yes, no - defaults to no)
+; Useful for cache maintenance if volume is mounted noatime 
+;  
+;touchcache=no
+;
+;
 ; Target sample rate for the generated sound files in Hz (default is 8000)
 ; For now app_picotts supports generation of 8000Hz or 16000Hz sound files
 ; so possible values are only 8000 and 16000. If set to another value it will
@@ -35,11 +46,23 @@
 ;samplerate=8000
 ;
 ;
-;
 ; Sox volume adjustment factor. Use to adjust volume.
-; Default is 1.0 - does not change pico2wave volume.
+; Default is 0.8 to avoid clipping pico2wave output to when converting to 
+; 8K sample rate.
 ; 0.5 would reduce volume, 1.5 would increase.
-; Increasing will probably cause distortion.
+; Increasing may cause distortion.
 ; See sox documentation.
 ; 
-;volume=1 
+;volume=0.8
+;
+;
+; Sox effects. Value is appended to the sox command converting the pico2wave 
+; output to sln format.
+; Default is no value
+; Example: speed 1.5 - increase audio speed and pitch 
+;          tempo 1.5 - increase speed, leaving pitch alone
+; CAUTION: Invalid options will prevent audio.
+; See sox documention. 
+; 
+;soxeffects=tempo -s 1.25
+

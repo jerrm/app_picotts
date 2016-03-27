@@ -87,7 +87,7 @@ install_over_flite: _flite
 	@echo " +---- app_picotts has replaced app_flite -----+"  
 	@echo " +                                             +"
 	@echo " + app_picotts has successfully been installed +"  
-	@echo " + over  app_flite                             +"  
+	@echo " + over app_flite                              +"  
 	@echo " +---------------------------------------------+"
 
 samples:
