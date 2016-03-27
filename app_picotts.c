@@ -1,9 +1,8 @@
 /*
  * Asterisk -- An open source telephony toolkit.
  *
- * Copyright (C) 2012 Ramon Martinez
- *
- * Ramon Martinez <rampa@encomix.org>
+ * Copyright (C) 2016 Jerry Murdock <gitjerrm@outlook.com>
+ * Copyright (C) 2012 Ramon Martinez <rampa@encomix.org>
  *
  * See http://www.asterisk.org for more information about
  * the Asterisk project. Please do not directly contact
