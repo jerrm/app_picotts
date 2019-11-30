@@ -32,7 +32,6 @@
 
 #include "asterisk.h"
 
-ASTERISK_FILE_VERSION(__FILE__, "$Revision: 00 $")
 #include <stdio.h>
 #include <string.h>
 #include <utime.h>
@@ -47,11 +46,7 @@ ASTERISK_FILE_VERSION(__FILE__, "$Revision: 00 $")
 
 //  return utime(fn, NULL);
 
-#ifdef AS_FLITE
-#define AST_MODULE "Flite"
-#else
 #define AST_MODULE "PicoTTS"
-#endif
 
 #define PICO_CONFIG "app_picotts.conf"
 #define MAXLEN 2048
