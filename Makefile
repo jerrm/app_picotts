@@ -20,8 +20,14 @@ CC=gcc
 OPTIMIZE=-O2
 DEBUG=-g
 
+GCCVERSION7 := $(shell expr `gcc -dumpversion | cut -f1 -d.` \> 6)
+
+ifeq "$(GCCVERSION7)" "1"
+	CFLAGS += -Wformat-truncation=0
+endif
+
 LIBS+=
-CFLAGS+= -pipe -fPIC -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -Wformat-truncation=0 -D_REENTRANT  -D_GNU_SOURCE -DAST_MODULE_SELF_SYM="__internal_app_picotts_self"
+CFLAGS+= -pipe -fPIC -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -D_REENTRANT  -D_GNU_SOURCE -DAST_MODULE_SELF_SYM="__internal_app_picotts_self"
 
 all: _all
 	@echo " +-------- app_picotts Build Complete -------+"
